@@ -3,7 +3,7 @@
 -   [x] Components
 -   [x] Bootstrap + Vite
 -   [x] Creazione del PublicController
--   [] Installazione e Integrazione Fortify
+-   [x] Installazione e Integrazione Fortify
 -   [] Creazione Modello + Migrazione + Controller
 -   [] Definisco una relazione One-to-Many (?)
 -   [] Modello do mettere in relazione + Migrazione
