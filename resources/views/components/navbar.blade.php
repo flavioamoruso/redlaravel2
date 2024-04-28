@@ -11,11 +11,11 @@
             <a href="{{route('register')}}">Registrati</a>
             @endguest
             @auth
-            Benvenuto {{Auth::user()->name}}
-            <li><form action="{{route('logout')}}" method="POST">
+            {{Auth::user()->name}}
+            <form action="{{route('logout')}}" method="POST">
               @csrf
-             <li><a href=""><button type="submit" class="nav-link text-dark p">Logout</button></a></li>
-            </form></li>
+             <a href=""><button type="submit" class="nav-link">Logout</button></a>
+            </form>
           </ul>
             @endauth
         </div>
