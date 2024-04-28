@@ -1,1 +1,25 @@
-@import 'bootstrap'
+@import 'bootstrap';
+
+h1{
+    color: darkred;
+    letter-spacing: 9px;
+}
+
+h2,h3,h4,h5,h6{
+    color: darkred;
+    letter-spacing: 4px;
+}
+
+a{
+    color: grey;
+    text-decoration: none;
+}
+
+a:hover{
+    color: darkred;
+}
+
+.btn{
+    background-color: darkred !important;
+    color: white !important;
+}
