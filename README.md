@@ -6,7 +6,7 @@
 -   [x] Installazione e Integrazione Fortify
 -   [x] Creazione Modello + Migrazione + Controller
 -   [] Definisco una relazione One-to-Many (?)
--   [] Modello do mettere in relazione + Migrazione
+-   [] Modello da mettere in relazione + Migrazione
 -   [] Creazione controller (?)
 -   [] Funzioni di relazioni
 -   [] Definisco una relazione Many-to-Many (?)
