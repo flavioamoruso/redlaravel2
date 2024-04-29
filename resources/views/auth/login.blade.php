@@ -5,6 +5,17 @@
     <div class="row">
         <h1>Accedi</h1>
       <div class="col-12 col-md-6 mt-3">
+
+        @if ($errors->any())
+        <div class="alert alert-danger">
+            <ul>
+                @foreach ($errors->all() as $error)
+                    <li>{{ $error }}</li>
+                @endforeach
+            </ul>
+        </div>
+            @endif
+
         <form action="{{route('login')}}" method="POST">
           @csrf
           <div class="mb-3">
