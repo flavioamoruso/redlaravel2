@@ -21,7 +21,13 @@
                         <label class="form-label">Prezzo</label>
                         <input type="number" step="0.5" class="form-control" name="price">
                     </div>
-                    <div class="mb-3">
+                    <select class="form-select" aria-label="Default select example">
+                        <option selected>Categorie</option>
+                        @foreach($categories as $category)
+                        <option value="1">{{$category->title}}</option>
+                        @endforeach
+                      </select>
+                    <div class="mb-3 mt-3">
                         <label class="form-label">Carica</label>
                         <input type="file" class="form-control" name="img">
                     </div>
