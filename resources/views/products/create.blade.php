@@ -8,7 +8,8 @@
                 <h2>Inserisci le card</h2>
             </div>
             <div class="col-12 col-md-6">
-                <form>
+                <form method="POST" action="{{route('products.store')}}" enctype="multipart/form-data">
+                    @csrf
                     <div class="mb-3">
                       <label class="form-label">Nome</label>
                       <input type="text" class="form-control" name="name">
@@ -21,10 +22,10 @@
                         <label class="form-label">Prezzo</label>
                         <input type="number" step="0.5" class="form-control" name="price">
                     </div>
-                    <select class="form-select" aria-label="Default select example">
+                    <select class="form-select" name="category">
                         <option selected>Categorie</option>
                         @foreach($categories as $category)
-                        <option value="1">{{$category->title}}</option>
+                        <option value="{{$category->id}}">{{$category->title}}</option>
                         @endforeach
                       </select>
                     <div class="mb-3 mt-3">
