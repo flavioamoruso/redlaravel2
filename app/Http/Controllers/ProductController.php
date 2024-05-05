@@ -5,7 +5,9 @@ namespace App\Http\Controllers;
 use App\Models\Product;
 use App\Models\Category;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\ProductController;
+use App\Http\Requests\ProductCreateRequest;
 
 class ProductController extends Controller
 {
@@ -40,7 +42,19 @@ class ProductController extends Controller
      */
     public function store(ProductCreateRequest $request)
     {
-        // DA CONTINUARE
+        // dd($request->all());
+
+        $product=Product::create([
+            'name'=>$request->title,
+            'price'=>$request->price,
+            'description'=>$request->body,
+            'img'=>$request->file('img')->store('public/img'),
+            'user_id'=>Auth::id(),
+            'category_id'=>$request->category
+        ]);
+
+        return redirect(route('products.create'))->with('message','Complimenti hai inserito correttamente la card');
+
     }
 
     /**
