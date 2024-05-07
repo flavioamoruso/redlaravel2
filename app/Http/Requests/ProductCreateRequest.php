@@ -11,7 +11,7 @@ class ProductCreateRequest extends FormRequest
      */
     public function authorize(): bool
     {
-        return false;
+        return true;
     }
 
     /**
@@ -23,18 +23,19 @@ class ProductCreateRequest extends FormRequest
     {
         return [
             'name'=>'required',
-            'description'=>'required|min:5',
             'price'=>'required',
-            'img'=>'required|image'
-
+            'description'=>'required|min:5',
+            'category'=>'required',
         ];
     }
 
-    public function message(){
-        return [
+    public function messages(){
+        return[
             'name.required'=>'Il nome è obbligatorio',
+            'price.required'=>'Il prezzo è obbligatorio',
             'description.required'=>'La descrizione è obbligatoria',
-            'price.required'=>'Il prezzo è obbligatorio'
+            'description.min'=>'La descrizione deve essere di 5 caratteri',
+            'category.required'=>'La categoria è obbligatoria'
         ];
     }
 }

@@ -45,9 +45,9 @@ class ProductController extends Controller
         // dd($request->all());
 
         $product=Product::create([
-            'name'=>$request->title,
+            'name'=>$request->name,
             'price'=>$request->price,
-            'description'=>$request->body,
+            'description'=>$request->description,
             'img'=>$request->file('img')->store('public/img'),
             'user_id'=>Auth::id(),
             'category_id'=>$request->category
